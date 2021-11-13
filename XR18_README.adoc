@@ -1,0 +1,85 @@
+= Using the XR18 Digital Audio Mixer
+Martin Cribbins <mcribbins@stonefifteen.com>
+
+:icons: font
+
+== Introduction
+
+Beringer's documentation of this product is barely adequate to the task of powering on the mixer and making connections. At best the XR18 User Manual can be considered incomplete; at worst the documentation causes damaging confusion.
+
+This manual is an attempt to clearly explain a number of operational scenarios, covering both studio/practice recording and live performance.
+
+== Structure of the mixer
+
+The mixer can be divided into two major functional areas:
+
+* Audio connection: mechanical connection to cables and the handling of the analog audio signal path, including volume, gain EQ, bus routing, and effects (hereafter called *FX*) processing.
+* Computer connection: control of the audio connections and processing, obtaining realtime status, and streaming digitized audio over USB or Ultranet.
+
+== Computer connection functional area
+
+The XR18 has no less than _five_ different types of digital connection:
+
+* USB - this is used to connect the mixer to a computer, wherein digitized audio can be recorded to, or else played back from the computer under software control. Technically speaking the mixer can be controlled and interrogated over USB, but in practice this is limited to using MIDI SysEx commands for triggering presets on the mixer.
+
+* Ethernet - used for control and monitoring of the mixer, including saving and restoring configuration data.
+
+* WiFi - functionally equivalent to the Ethernet connection, except of course for the fact that the connection is wireless. Practically speaking users avoid this connection as the XR18 is well known for issues in its WiFi capability. The most common practical solution for live performance use if to purchase a dedicated WiFi router (a decent unit can be purchased for less than $30) and connect the router to the XR18 Ethernet port.
+
+* Ultranet - a somewhat obscure professional networking connection that is based on the lower layers of the Ethernet standard; this allows for transferring digitized audio as well as command and monitoring.
+
+* MIDI In and Out - actual "old school" 5-pin DIN connectors for connecting to MIDI control surfaces, or else serving as an autonomous USB-to-MIDI interface.
+
+Practically speaking in live performance situations Ethernet (connected to a dedicated wireless router) is used. In some cases a specialized device such as the BandPractice.Cloud Recorder is attached via USB to record the digitized audio of the performance. For studio recording settings, a computer is connected to the XR18 via a wired Ethernet connection for command and monitoring, as well as via USB for digitized audio recording and playback.
+
+== Controlling and managing the mixer: _software_
+
+The XR18 is an example of the latest generation of audio mixers; the progression of mixers has followed this generational timeline:
+
+* First generation: A stationary tube-based electronic console installed in a studio.
+* Second generation: Portable mixers for live performance settings that evolved into "solid state" (_i.e._ not tube-based) mixers that could be mounted into portable audio racks.
+* Third generation: Stationary and later portable mixers that used motorized faders, culminating in the ability to save and restore fader and other settings to and from external digital storage.
+* Fourth generation: Simple external digital storage evolved into complex software applications that can control and monitor the mixer in realtime, including Digital Controlled Amplifiers (DCAs) and MIDI-triggered presets.
+* Fifth and latest generation: The mixer is extended to incorporate a Digital Audio Interface (DAI) that allows for realtime digitization of audio from all channels and streaming that audio data to computer storage. This generation has now culminated in the option to completely eliminate virtually all physical controls and indicators from the mixer hardware, transferring these functions to software running on computers, tablets, or even phones.
+
+== Audio connection functional area
+
+=== Common usage scenarios
+
+==== Saving and restoring configuration
+
+
+The mixer has only one mechanism for _internally_ storing configuration information: the *Snapshot*; a Snapshot captures every piece of configuration under an assigned label. Snapshots persist across power cycles; therefore saving a Snapshot which defines how the mixer will operate when it is powered on is *_very highly recommended_*. Beyond the Snapshot that is in effect when the mixer is powered on, the mixer is _useless_ without software running on an external device (tablet, phone, computer).
+
+
+
+1) General Configuration saving:
+- All names 18 characters or less
+- On PC, save as Snapshot
+- On PC, save as Scene matching Snapshot name, to Google Drive->My Drive->XR18
+- On Tablet, SELECT THE SNAPSHOT and then save as Scen of same name.
+
+==== Controlling PA/monitor ringing (feedback)
+
+2) Monitor Ringing:
+- On PC (if applicable) select LR on the right function selection area
+then click EQ tab at top
+then click RTA and PEQ
+when done click Save and save as EQ Preset
+
+- On tablet select Bus Master, the select RTA, and then click GTA
+when done, click Save and save as same name used on PC (if it was saved there).
+
+==== Managing FX
+
+3) Effects adjustment - Configure Effect
+- Click on the FX tab
+- Select the type of effect for a FX slot
+- Configure the Effect-specific parameters. NOTE: Multiple input channels can use the same FX slot, sharing the current Effect
+configuration, or the SAME effect can be selected for different FX slots, such that each slot uses the same effect, but configured
+differently.
+- In the FX panel area for the specific effect, DO NOT SELECT INSERT!!! otherwise you will have to adjust the level (wetness) of
+the effect by adjusting the "Level" parameter. This does not work as well as using sends, and it means that
+- In the FX tab at the right iside the FX panel,
+- Click on the channel for which an Effect will be used, then click the Sends tab and adjust the fader for the desired effect slot, thus the wetness.
+- Click on the particular FX[1-4] button in the function selection area, then adjust the slider to adjust the contribution of the effect to the main outut.
