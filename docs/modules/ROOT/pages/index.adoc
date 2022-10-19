@@ -1,0 +1,37 @@
+= DocHub: Methodology for a centralized documentation site
+
+== Introduction
+
+It's broadly accepted that robust documentation is essential to a highly functional engineering organization; at the same time it's common knowledge that establishing and then maintaining documentation is often very, very difficult. When contemplating the development of a documentation methodology, engineering managers and executives are typically confronted with this deadly triangle:
+
+.   Engineers and other documentation authors are recalcitrant, being conflicted by seeing documentation as a large effort that's in opposition to their prime directive of _delivery_.
+.   To address 1), a substantial effort is undertaken to inculcate the engineers and deliver on a tactical solution (authoring tools, document syntax, local organization), only to find that the larger effort fails over time when nobody can find or navigate information in the assembled site.
+.   To solve 2) a documentation site generation solution must be selected; too often this is undermined by cost, resistance to adoption because of 1), and the solution requires authoring tools that are either too limiting or too comlpicated.
+
+In order to step outside of the deadly triangle, reasonably educated tool, framework, and methodology decisions have to be made; these decisions need to be underpinned by a few operating principles:
+
+-   Be opinionated, but not overbearing. The documentation authoring community will develop improvements to the accepted methodology and tools over time; until then they need some structure to work from. To this end questions regarding document syntax, authoring tools, and repository-level directory structure should be disseminated from the top down initially.
+-   Cheap is great, and _free_ is unbeatable. Establishing the documentation infrastructure requires executive buy-in, so reducing - or even better, eliminating - purchase and licensing costs goes a very long way towards executive sponsoship.
+-   It's not just _prose_, it just as much about _diagrams_.
+-   Leverage your DevOps team as much as possible.
+
+ both the senior operational levels typicall 
+For many organizations it is essential to have a central documentation site which meets these criteria:
+
+-   *_Contextual_*: One of the most important aspects of a site is its facilitation of the user's sense of of how the viewed page relates to other points in the site's structure. Navigational context is critical when the user travels to links embedded in the curent page. 
+-   Automated: as changes to documents within the sourcing repositories are updated, the site infrastructure should be able to automatically incorporate and publish those changes.
+-   Hierarchical display: most organizations organize their artificats (software, documentation) hierarchically, the site must easily track that hierarchy.
+-   Modular: as an organization subdivides its software and documentation across various teams and their corresponding repositories, the rendered documentation needs to be buildable from the contributing repositories without hindering any team.
+-   Git integrated: per the above, documentation will typically need to be organized into multiple repositories with version control; therefore Git integration is essential.
+-   Low-friction: contributors need to create and revise documentation with the lowest burden from syntax, authoring tools, or process.
+-   Open source: leveraging the benefits of no licensing cost, full security auditability, and an avenue for enhancement if required.
+
+*DocHub* is simply a name coined for this documenation site methodology and its supporting techniques and tools. To demonstrate and prove the methodology Dochub itself is authored, change-controlled, an dpublished using the principles that it espouses, using these tools:
+
+-   https://docs.asciidoctor.org/[*AsciiDoc*] : An open source markup language that allows one to start using it immediately, yet grow into more complex composition and formatting scenarios as needed; this documentation syntax will feel very familiar to anyone who already works with Markdown. There are many in the software and other technical industries who believe that AsciiDoc will eventually supplant Markdown, with a case in point being GitHub accepting AsciiDoc for repository READMEs and other documents since (roughly) 2015.
+-   https://docs.antora.org/antora/latest/[*Antora*] : This is the engine which has been selected for this methodology; after a great deal of experimentation it is clear that Antora is very solid, and that it runs on most anything that supports _Node.js_. The overarching requirements for deploying Anotra are quite simple, consisting of a single top-most metadata file, a simple prescribed directory structure and single metadata file for each sourced documentation repository.
+-   https://github.com[*GitHub*] : While GitHub is certainly not the only public Git repository service available, it provides two very effective services for deploying an Antora-based documentation site: https://docs.github.com/en/actions/using-workflows[GitHub Workflows] and https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages[GitHub Pages]; GitLab and others offer similar services, so the example expressed here ought to be reasonably portable to another environment. 
+-   *Various IDEs* : At the least, two very popular IDEs - https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode[_VSCode_] and https://plugins.jetbrains.com/plugin/7391-asciidoc[_IntelliJ_] offer very capable extensions/plugins that support the realtime display of formatted AsciiDoc, as the content is edited.
+-   *Supporting Packages* : There are two extensions for Antora or AsciiDoc that are used in this example: https://github.com/Mogztter/antora-lunr[Antora-Lunr], which adds https://lunrjs.com/[LUNR] search capability to your generated site, and https://github.com/Mogztter/asciidoctor-kroki[AsciiDoctor-Kroki], which plugs in https://kroki.io/#support[Kroki] to enable the expansion of various diagramming language blocks (such as https://plantuml.com/[PlantUML]).
+
+The navigation column at the left will guide you through the various topics.
