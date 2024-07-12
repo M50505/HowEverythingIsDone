@@ -7,9 +7,9 @@ asciidoc:
     xrefstyle: short@
     example-caption: false
     listing-caption: Example@
-    version-node-major: '16'
-    version-node: '16.13.1'
-    version-npm: '8.2.0'
+    version-node-major: '22'
+    version-node: '22.4.1'
+    version-npm: '10.8.2'
     url-node-releases: https://nodejs.org/en/about/releases/
     url-chat: https://antora.zulipchat.com
     url-repo: https://gitlab.com/antora/antora
