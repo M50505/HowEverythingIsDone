@@ -41,6 +41,8 @@ jobs:
       
       - name: Generate the site
         run: |
+          sudo uname -a
+          
           for func in scripts/functions/*
           do
             . ${func}
