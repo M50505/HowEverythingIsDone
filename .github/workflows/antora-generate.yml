@@ -59,9 +59,9 @@ jobs:
         with:
           path: build/site
 
-      # - name: Deploy to GitHub Pages
-      #   id: deployment
-      #   uses: actions/deploy-pages@v1
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
 
       # The Antora Action was tested, but did not work properly given the
       # need for asciidoctor-kroki, etc. The version tested was v0.2.4, so it
