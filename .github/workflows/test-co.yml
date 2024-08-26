@@ -1,4 +1,4 @@
-name: Testing Checkout
+name: TestingCheckout
 
 on:
   workflow_dispatch
