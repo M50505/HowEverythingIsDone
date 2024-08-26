@@ -28,7 +28,7 @@ installNode ()
 	# repository references, so that we can use apt-get to 
 	# install the latest version of Node.js
 
-	if curl -sL https://deb.nodesource.com/setup_16.x | bash -
+	if curl -sL https://deb.nodesource.com/setup_22.x | bash -
 	then
 		if apt-get install -y nodejs
 		then
