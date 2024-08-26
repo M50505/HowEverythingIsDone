@@ -32,15 +32,9 @@
 #	Testing status:
 #		UNTESTED
 
-generateSimpleSite ()
+generateSite ()
 {
-	if [[ $# -lt 1 ]]
-	then
-		error You must specify the path of the Antora playbook file.
-		return 1
-	fi
-
-	local playbookFile=${1}																					# The file name of the Antora playbook for a simple-type site
+	local playbookFile=${1:-antora-playbook.yml}																					# The file name of the Antora playbook for a simple-type site
 
 	info Checking if Node.js 16+ is installed
 

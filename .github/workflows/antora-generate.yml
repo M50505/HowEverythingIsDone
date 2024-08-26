@@ -36,20 +36,8 @@ jobs:
       name: github-pages
     steps:
       
-      # These two steps *must* be explicitly coded here, as we have
-      # to checkout our own repository into this worker container's
-      # runtime environment.
-
-      - name: Setup Git Credentials
-        run: |
-          git config --global init.defaultBranch main
-          git config --global credential.helper store
-          cat <<EOF > ${HOME}/.git-credentials
-          https://${{ secrets.ANTORA_PAT }}@github.com
-          EOF
-  
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       
       - name: Generate the site
         run: |
@@ -58,7 +46,7 @@ jobs:
             . ${func}
           done
 
-          generateSimpleSite antora-playbook-simple.yml
+          generateSite antora-playbook.yml
           touch build/site/.nojekyll
           mkdir -p build/site/plantuml/themes
           cp -r plantuml build/site
@@ -74,15 +62,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-
-        # with:
-        #   github_token: ${{ secrets.GITHUB_TOKEN }}
-      
-      # - name: Publish to GitHub Pages
-      #   uses: peaceiris/actions-gh-pages@v3
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     publish_dir: build/site
 
       # The Antora Action was tested, but did not work properly given the
       # need for asciidoctor-kroki, etc. The version tested was v0.2.4, so it
