@@ -36,10 +36,10 @@ generateSite ()
 {
 	local playbookFile=${1:-antora-playbook.yml}																					# The file name of the Antora playbook for a simple-type site
 
-	info Checking if Node.js 22+ is installed
+	# info Checking if Node.js 22+ is installed
 
-	node -v
-	
+	# node -v
+
 	# if ! isNodeVersionInstalled 22
 	# then
 	# 	info Need to install Node.js 22+
