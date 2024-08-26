@@ -1,4 +1,4 @@
-name: TestingCheckout
+name: Testing Checkout
 
 on:
   workflow_dispatch
@@ -15,9 +15,8 @@ jobs:
     environment:
       name: github-pages
     steps:
-      
-        - name: co
-            uses: actions/checkout@v4
-            with:
+      - name: co
+        uses: actions/checkout@v4
+        with:
             token: ${{ secrets.PAT_GENERAL}} # `GH_PAT` is a secret that contains your PAT
         
