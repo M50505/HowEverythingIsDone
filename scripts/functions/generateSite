@@ -38,17 +38,19 @@ generateSite ()
 
 	info Checking if Node.js 22+ is installed
 
-	if ! isNodeVersionInstalled 22
-	then
-		info Need to install Node.js 22+
-		if installNode
-		then
-			info Node.js 22+ is now installed
-		else
-			error Failed to install Node.js 22+
-			return 1
-		fi
-	fi
+	node -v
+	
+	# if ! isNodeVersionInstalled 22
+	# then
+	# 	info Need to install Node.js 22+
+	# 	if installNode
+	# 	then
+	# 		info Node.js 22+ is now installed
+	# 	else
+	# 		error Failed to install Node.js 22+
+	# 		return 1
+	# 	fi
+	# fi
 
 	info Checking if Antora 3+ is installed
 
