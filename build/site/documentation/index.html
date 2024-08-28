@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DocHub: Methodology for a centralized documentation site :: engDocMethod Example Engineering Documentation</title>
+    <meta name="generator" content="Antora 3.1.9">
+    <link rel="stylesheet" href="../_/css/site.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="..">engDocMethod Example Engineering Documentation</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs" autofocus>
+        </div>
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="documentation" data-version="">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="./">Documentation</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item is-current-page" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="./">DocHub: Methodology for a centralized documentation site</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="music/">Using the XR18 Digital Audio Mixer</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Documentation</span>
+    <span class="version"></span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <div class="title"><a href="./">Documentation</a></div>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="./" class="home-link is-current"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="./">Documentation</a></li>
+    <li><a href="./">DocHub: Methodology for a centralized documentation site</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="https://github.com/M50505/HowEverythingIsDone/edit/main/docs/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">DocHub: Methodology for a centralized documentation site</h1>
+<div class="sect1">
+<h2 id="_introduction"><a class="anchor" href="#_introduction"></a>Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It&#8217;s broadly accepted that robust documentation is essential to a highly functional engineering organization; at the same time it&#8217;s common knowledge that establishing and then maintaining documentation is often very, very difficult. When contemplating the development of a documentation methodology, engineering managers and executives are typically confronted with this deadly triangle:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Engineers and other documentation authors are recalcitrant, being conflicted by seeing documentation as a large effort that&#8217;s in opposition to their prime directive of <em>delivery</em>.</p>
+</li>
+<li>
+<p>To address 1), a substantial effort is undertaken to inculcate the engineers and deliver on a tactical solution (authoring tools, document syntax, local organization), only to find that the larger effort fails over time when nobody can find or navigate information in the assembled site.</p>
+</li>
+<li>
+<p>To solve 2) a documentation site generation solution must be selected; too often this is undermined by cost, resistance to adoption because of 1), and the solution requires authoring tools that are either too limiting or too comlpicated.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>In order to step outside of the deadly triangle, reasonably educated tool, framework, and methodology decisions have to be made; these decisions need to be underpinned by a few operating principles:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Be opinionated, but not overbearing. The documentation authoring community will develop improvements to the accepted methodology and tools over time; until then they need some structure to work from. To this end questions regarding document syntax, authoring tools, and repository-level directory structure should be disseminated from the top down initially.</p>
+</li>
+<li>
+<p>Cheap is great, and <em>free</em> is unbeatable. Establishing the documentation infrastructure requires executive buy-in, so reducing - or even better, eliminating - purchase and licensing costs goes a very long way towards executive sponsoship.</p>
+</li>
+<li>
+<p>It&#8217;s not just <em>prose</em>, it just as much about <em>diagrams</em>.</p>
+</li>
+<li>
+<p>Leverage your DevOps team as much as possible.</p>
+<div class="literalblock">
+<div class="content">
+<pre> both the senior operational levels typicall
+For many organizations it is essential to have a central documentation site which meets these criteria:</pre>
+</div>
+</div>
+</li>
+<li>
+<p><strong><em>Contextual</em></strong>: One of the most important aspects of a site is its facilitation of the user&#8217;s sense of of how the viewed page relates to other points in the site&#8217;s structure. Navigational context is critical when the user travels to links embedded in the curent page.</p>
+</li>
+<li>
+<p>Automated: as changes to documents within the sourcing repositories are updated, the site infrastructure should be able to automatically incorporate and publish those changes.</p>
+</li>
+<li>
+<p>Hierarchical display: most organizations organize their artificats (software, documentation) hierarchically, the site must easily track that hierarchy.</p>
+</li>
+<li>
+<p>Modular: as an organization subdivides its software and documentation across various teams and their corresponding repositories, the rendered documentation needs to be buildable from the contributing repositories without hindering any team.</p>
+</li>
+<li>
+<p>Git integrated: per the above, documentation will typically need to be organized into multiple repositories with version control; therefore Git integration is essential.</p>
+</li>
+<li>
+<p>Low-friction: contributors need to create and revise documentation with the lowest burden from syntax, authoring tools, or process.</p>
+</li>
+<li>
+<p>Open source: leveraging the benefits of no licensing cost, full security auditability, and an avenue for enhancement if required.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>DocHub</strong> is simply a name coined for this documenation site methodology and its supporting techniques and tools. To demonstrate and prove the methodology Dochub itself is authored, change-controlled, an dpublished using the principles that it espouses, using these tools:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://docs.asciidoctor.org/"><strong>AsciiDoc</strong></a> : An open source markup language that allows one to start using it immediately, yet grow into more complex composition and formatting scenarios as needed; this documentation syntax will feel very familiar to anyone who already works with Markdown. There are many in the software and other technical industries who believe that AsciiDoc will eventually supplant Markdown, with a case in point being GitHub accepting AsciiDoc for repository READMEs and other documents since (roughly) 2015.</p>
+</li>
+<li>
+<p><a href="https://docs.antora.org/antora/latest/"><strong>Antora</strong></a> : This is the engine which has been selected for this methodology; after a great deal of experimentation it is clear that Antora is very solid, and that it runs on most anything that supports <em>Node.js</em>. The overarching requirements for deploying Anotra are quite simple, consisting of a single top-most metadata file, a simple prescribed directory structure and single metadata file for each sourced documentation repository.</p>
+</li>
+<li>
+<p><a href="https://github.com"><strong>GitHub</strong></a> : While GitHub is certainly not the only public Git repository service available, it provides two very effective services for deploying an Antora-based documentation site: <a href="https://docs.github.com/en/actions/using-workflows">GitHub Workflows</a> and <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages">GitHub Pages</a>; GitLab and others offer similar services, so the example expressed here ought to be reasonably portable to another environment.</p>
+</li>
+<li>
+<p><strong>Various IDEs</strong> : At the least, two very popular IDEs - <a href="https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode"><em>VSCode</em></a> and <a href="https://plugins.jetbrains.com/plugin/7391-asciidoc"><em>IntelliJ</em></a> offer very capable extensions/plugins that support the realtime display of formatted AsciiDoc, as the content is edited.</p>
+</li>
+<li>
+<p><strong>Supporting Packages</strong> : There are two extensions for Antora or AsciiDoc that are used in this example: <a href="https://github.com/Mogztter/antora-lunr">Antora-Lunr</a>, which adds <a href="https://lunrjs.com/">LUNR</a> search capability to your generated site, and <a href="https://github.com/Mogztter/asciidoctor-kroki">AsciiDoctor-Kroki</a>, which plugs in <a href="https://kroki.io/#support">Kroki</a> to enable the expansion of various diagramming language blocks (such as <a href="https://plantuml.com/">PlantUML</a>).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The navigation column at the left will guide you through the various topics.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>
