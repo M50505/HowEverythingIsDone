@@ -1,5 +1,5 @@
 site:
-  title: engDocMethod Example Engineering Documentation
+  title: Collected notes covering procedures and configurations
   
   start_page: documentation:ROOT:index.adoc
 content:

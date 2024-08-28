@@ -1,3 +1,2 @@
 * xref:ROOT:index.adoc[]
-** xref:music:index.adoc[]
 
