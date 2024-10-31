@@ -14,6 +14,6 @@ asciidoc:
     # url-chat: https://antora.zulipchat.com
     # url-repo: https://gitlab.com/antora/antora
     # url-asciidoc: https://docs.asciidoctor.org/asciidoc/latest
-nav:
-  - modules/ROOT/nav.adoc
+# nav:
+#   - modules/ROOT/nav.adoc
  
