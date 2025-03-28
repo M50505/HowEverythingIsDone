@@ -37,7 +37,7 @@ jobs:
     steps:
       
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
       
       - name: Generate the site
         run: |
@@ -54,21 +54,21 @@ jobs:
           cp -r plantuml build/site
 
       - name: Configure Pages
-        uses: actions/configure-pages@v2
+        uses: actions/configure-pages@v5.0.0
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3.0.1
         with:
           path: build/site
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4.0.5
 
       # The Antora Action was tested, but did not work properly given the
       # need for asciidoctor-kroki, etc. The version tested was v0.2.4, so it
       # is planned to test the action once it reaches v0.3.x, even though it may not
-      # be a fit given that we need to pre-stage the content repositorie (i.e. not
+      # be a fit given that we need to pre-stage the content repository (i.e. not
       # have Antora pull directly from the Git repositories).
       #
       # In the meantime Antora must be run from the "command line"; therefore we need
@@ -82,7 +82,7 @@ jobs:
       # a)  Creating a PAT for the repo's owner account, specifying that it's SSO-authorized
       #     for this and all other repositories to be pulled from. Follow these steps:
       #     1 - Navigate from the owning account's avatar (upper right on the web page) to:
-      #     2 - Settings->Developer settings->Personal acess tokens
+      #     2 - Settings->Developer settings->Personal access tokens
       #     3 - click on Generate new token
       #     4 - Be sure to temporarily copy the nwe token value, as it is need in b) below.
       #     5 - Enter what is essentially the name of the token in the Note field, e.g. AntoraPAT
@@ -143,7 +143,7 @@ jobs:
       #   enabled by specifying:
       #     --stacktrace
       #
-      # The full-blown debuggin invokation of Antora will look like this:
+      # The full-blown debugging in vocation of Antora will look like this:
       #   npx antora --git-credentials-path ${HOME}/.git-credentials --stacktrace antora-playbook.yml
 
       #
